@@ -8,3 +8,5 @@ em nossas variáveis, além de nos oferecer recursos avançados, como a Orienta�
 
 Os tipos de dados especificam o que podemos colocar nos nossos objetos do banco de dados, podendo ser tabelas,
 stored procedures, variáveis e etc. integridade do banco de dados depende decisivamente dos tipos de dados com escopo apropriado
+
+Criar um endpoint com verbos: POST, PUT e DELETE
