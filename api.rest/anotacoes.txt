@@ -1,0 +1,10 @@
+(VIDEO 2)
+
+Whitelist: No caso do video, criamos um arquivo DTO, na qual criamos 3 funções dentro dele (onde seria o name, description e area)
+na qual as duas primeiras são do tipo string e a última do tipo number, o whitelist vai servir para quando for testar o programa no
+postman, aparecer APENAS as informações colocadas dentro do DTO, o que tiver fora dele, não será exibido na hora de rodar o programa.
+
+forbidNonWhitelisted: Semelhante ao whitelist, ele não permite que nada fora do DTO (no caso do video), seja exibido na hora de rodar 
+o programa, mas com uma diferença, ao invés dele apenas não mostrar o que está fora do DTO, ele exibe um erro que está faltando uma função
+dentro do DTO, uma boa para debugar o código, pois se não precisa daquela função fora do DTO, pode simplesmente apaga la ou se precisar,
+apenas usar o comando Whitelist para não exibir. 
