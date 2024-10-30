@@ -29,7 +29,7 @@ export class TodoController {
 
   @Get(':id')
   async show(@Param('id', new ParseUUIDPipe()) id: string) {
-    return await this.todoService.findOneOrFail(id);
+    return await this.todoService.findOne(id);
   }
 
   @Put(':id')

@@ -5,25 +5,25 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
-} from "typeorm";
+} from 'typeorm';
 
-@Entity({ name: "todos" })
+@Entity({ name: 'todos' })
 export class TodoEntity {
-  @PrimaryGeneratedColumn("uuid")
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
   task: string;
 
-  @Column({ name: "is_done", type: "tinyint", width: 1 })
+  @Column({ name: 'is_done', type: 'tinyint', width: 1, nullable: true })
   isDone: number;
 
-  @CreateDateColumn({ name: "created_at" })
+  @CreateDateColumn({ name: 'created_at' })
   createAdt: string;
 
-  @UpdateDateColumn({ name: "uptaded_at" })
+  @UpdateDateColumn({ name: 'uptaded_at' })
   updateAdt: string;
 
-  @DeleteDateColumn({ name: "deleted_at" })
+  @DeleteDateColumn({ name: 'deleted_at' })
   deleteAdt: string;
 }
