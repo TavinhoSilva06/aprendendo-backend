@@ -15,8 +15,8 @@ export class TodoEntity {
   @Column()
   task: string;
 
-  @Column({ name: 'is_done', type: 'tinyint', width: 1, nullable: true })
-  isDone: number;
+  @Column({ name: 'is_done', type: 'tinyint', width: 1 })
+  IsDone: number;
 
   @CreateDateColumn({ name: 'created_at' })
   createAdt: string;
