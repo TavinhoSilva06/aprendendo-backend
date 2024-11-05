@@ -12,8 +12,12 @@ import {
 } from '@nestjs/common';
 import { TodoService } from './todo.service';
 import { get } from 'http';
+import { CreateTodoDto } from './dto/create-todo.dto';
+import { UpdateTodoDto } from './dto/update-todo.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('api/v1/todos')
+@ApiTags('todos')
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
@@ -23,7 +27,7 @@ export class TodoController {
   }
 
   @Post()
-  async create(@Body() Body) {
+  async create(@Body() Body: CreateTodoDto) {
     return await this.todoService.create(Body);
   }
 
@@ -33,7 +37,10 @@ export class TodoController {
   }
 
   @Put(':id')
-  async update(@Param('id', new ParseUUIDPipe()) id: string, @Body() body) {
+  async update(
+    @Param('id', new ParseUUIDPipe()) id: string,
+    @Body() body: UpdateTodoDto,
+  ) {
     return await this.todoService.update(id, body);
   }
 
