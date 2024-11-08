@@ -1,3 +1,4 @@
+import { ApiProperty } from '@nestjs/swagger';
 import {
   Column,
   CreateDateColumn,
@@ -13,17 +14,22 @@ export class TodoEntity {
   id: string;
 
   @Column()
+  @ApiProperty()
   task: string;
 
   @Column({ name: 'is_done', type: 'tinyint', width: 1 })
+  @ApiProperty()
   IsDone: number;
 
   @CreateDateColumn({ name: 'created_at' })
-  createAdt: string;
+  @ApiProperty()
+  createAt: string;
 
   @UpdateDateColumn({ name: 'uptaded_at' })
-  updateAdt: string;
+  @ApiProperty()
+  updateAt: string;
 
   @DeleteDateColumn({ name: 'deleted_at' })
-  deleteAdt: string;
+  @ApiProperty()
+  deleteAt: string;
 }
