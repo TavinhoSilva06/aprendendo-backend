@@ -56,7 +56,7 @@ export class TodoController {
   }
 
   @Get(':id')
-  @ApiOperation({ summary: 'Exibif=r dados de uma tarefa' })
+  @ApiOperation({ summary: 'Exibir dados de uma tarefa' })
   @ApiResponse({
     status: 200,
     description: 'Dados de uma tarefa retornada com sucesso',
